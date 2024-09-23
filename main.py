@@ -1,5 +1,7 @@
 class Seznam:
   data = []
+  def add(self, inp):
+    self.data.append(inp)
 
 s = Seznam()
 
