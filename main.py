@@ -26,6 +26,29 @@ s = Seznam()
 
 def main():
   run = 1
+  s.help()
+  while run:
+    try:
+      m = int(input("> "))
+    except Exception as E:
+      continue
+  if m in [1,2,3,4,5]:
+    match m:
+      case 1:
+        s.help()
+      case 2:
+        e = input("Add an element: ")
+        s.add(e)
+      case 3:
+        s.list()
+        e = input("Specify element: ")
+        s.rem(e)
+      case 4:
+        s.list()
+      case 5:
+        run = 0
+      
+  
 
 if __name__ == "main.py":
   main()
